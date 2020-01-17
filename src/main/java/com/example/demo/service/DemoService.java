@@ -7,5 +7,7 @@ import com.example.demo.model.User;
 public interface DemoService {
 	
 	public List<User> getAllUsers() throws Exception;
+	
+	public User adduser(User user) throws Exception;
 
 }

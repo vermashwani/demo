@@ -1,5 +1,6 @@
 package com.example.demo.service;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,4 +21,13 @@ public class DemoServiceImpl implements DemoService {
 
 		return demoRepository.findAll();
 	}
+	
+    public User adduser(User user) throws Exception{
+    	user.setUserAddedDate(new Date());
+       
+    	demoRepository.save(user);
+        return user;
+    
+}
+
 }
